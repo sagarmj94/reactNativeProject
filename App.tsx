@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {View, TextInput, SafeAreaView, StyleSheet,Button} from 'react-native';
+import {View,Text, TextInput, SafeAreaView, StyleSheet,Button} from 'react-native';
 import Container from './src/component/Container';
+import CustomButton from './src/component/CustomButton';
 
 interface Props {}
 enum InputType{
@@ -43,6 +44,7 @@ class App extends Component<Props, State> {
   render() {
     return (
       <Container containerStyles={{alignItems:'center'}}>
+        <Text style={{fontSize:36,marginBottom:10}}>{"Login"}</Text>
         <TextInput
        
           onChangeText={(val)=>this.updateTextInput(val,InputType.EMAIL)}
@@ -57,12 +59,10 @@ class App extends Component<Props, State> {
           style={{width: 300, borderWidth: 1,marginTop:5,marginBottom:5}}
           secureTextEntry={true}
         />
-        <Button title={InputType.LOGIN_BUTTON} onPress={this.handleLogin}/>
+        <CustomButton onPress={this.handleLogin} title={InputType.LOGIN_BUTTON}/>
       </Container>
     );
   }
 }
-
-
 
 export default App;
