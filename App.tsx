@@ -64,7 +64,7 @@ class App extends Component<Props, State> {
   render() {
     return (
       <Container containerStyles={{alignItems: 'center'}}>
-        <Text style={{fontSize: 36, marginBottom: 10}}>{'Login'}</Text>
+        <Text style={{fontFamily:'Muli',fontSize: 36, marginBottom: 10}}>{'Login'}</Text>
         <TextInput
           onSubmitEditing={this.focusOnNextInput}
           returnKeyType="next"
