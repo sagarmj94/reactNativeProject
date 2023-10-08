@@ -7,6 +7,7 @@ import {
   TextStyle,
   StyleSheet,
 } from 'react-native';
+import { PrimaryTheme } from '../styles/Themes';
 
 export interface Props {
   title: string;
@@ -31,7 +32,7 @@ CustomButton.defaultProps = {
 };
 const styles = StyleSheet.create({
     buttonStyles: {
-      backgroundColor: 'blue',
+      backgroundColor: PrimaryTheme.$DARK_PRIMARY_COLOR,
       borderRadius: 5,
       width: 120,
       height: 40,

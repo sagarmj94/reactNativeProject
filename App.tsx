@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import Container from './src/component/Container';
 import CustomButton from './src/component/CustomButton';
+import { PrimaryTheme } from './src/styles/Themes';
 
 interface Props {}
 enum InputType {
@@ -64,7 +65,7 @@ class App extends Component<Props, State> {
   render() {
     return (
       <Container containerStyles={{alignItems: 'center'}}>
-        <Text style={{fontFamily:'Muli',fontSize: 36, marginBottom: 10}}>{'Login'}</Text>
+        <Text style={{color:PrimaryTheme.$TEXT_COLOR_900, fontFamily:'Muli',fontSize: 36, marginBottom: 10}}>{'Login'}</Text>
         <TextInput
           onSubmitEditing={this.focusOnNextInput}
           returnKeyType="next"
